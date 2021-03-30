@@ -1,3 +1,3 @@
 rootpath="./benchmark/"
-modelpath="./pretrained/"
+modelpath="./bert-base-uncased/"
 outputname='Newmodel'
