@@ -58,7 +58,6 @@ def train(dataset_name, batch_size=8, num_workers=0, max_epoch=15, lr=3e-5, weig
         dataset = []
         if all(map(lambda x: os.path.exists(os.path.join(root_path, dataset_name, x)), dataset_pkl_file)):
             for x in dataset_pkl_file:
-                print(x)
                 with open(os.path.join(root_path, dataset_name, x), "rb") as pickle_file:
                     content = pickle.load(pickle_file)
                     dataset.append(content)
