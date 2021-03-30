@@ -95,7 +95,7 @@ def train(dataset_name, batch_size=8, num_workers=0, max_epoch=15, lr=3e-5, weig
 
         return dataset_loader
 
-    rel2id = json.load(open(os.path.join(root_path, dataset_name, 'rel2id.json')))
+    rel2id = json.load(open(os.path.join(root_path, dataset_name, 'semeval_rel2id.json')))
 
     sentence_encoder = BERTHiddenStateEncoder(pretrain_path=bert_path)
     _model = PARA(sentence_encoder, len(rel2id), rel2id, num_token_labels=2, subject_1=subject_1, use_cls=use_cls)
